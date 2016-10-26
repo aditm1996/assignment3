@@ -21,15 +21,16 @@ public:
     
     ~LinkedList(){
         
-        if(count){
+        if(count!=0){
         
             Node<T>* temp=head;
             
             while(temp!=nullptr){
                     
+                Node<T>* temp2=temp->next;
                 delete temp;
                 count--;
-                temp=temp->next;
+                temp=temp2;
                 
             }
         }
